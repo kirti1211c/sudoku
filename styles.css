@@ -1,0 +1,238 @@
+.hidden {
+    display: none;    
+}
+
+body.dark{
+    background-color: #333333;
+    color: white;    
+}
+body.coloured{
+    background-color: #1e2b3b;
+    color: #07dec5;    
+    
+}
+
+header {
+    text-align: center;
+    padding-bottom: 1px;
+    /* border-bottom: 1px solid black; */
+}
+    
+h1{
+    font-size: 45pt;
+    margin-bottom: 25px;
+}
+
+#setup-game {
+    /* display: flex; */
+    justify-content: center;
+}
+#setup-game > *{
+    margin-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    align-items: center;
+}
+button{
+    justify-self: center;
+    padding: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid;
+    border-radius: 5px ;
+    font-weight: bold;
+    font-size: medium;
+}
+
+p#timer, p#lives {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+    
+#game{
+   display: flex;
+   justify-content: center;
+}
+
+#number-container > p {
+    border: 1px solid black;
+    border-radius: 20%;
+    width: 60px;
+    height: 60px;
+    font-size: 40pt;
+    margin-left: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;   
+}
+
+#board{
+    padding-top: 10px;
+    margin-top: 10px;
+    display: flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    width: 600px;
+    height: 600px;
+}
+
+.tile{
+    border: 1px solid black;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    margin: 0px;
+    vertical-align:middle;
+    font-size: 40pt;
+}
+p.selected {
+    background-color: lightblue;
+}
+
+p.incorrect {
+    color: red;
+}    
+    
+.rightBorder {
+    border-right: 4px solid black;
+}
+    
+.bottomBorder {
+    border-bottom: 4px solid black;
+}
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    /* font-size: 22px; */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  body.coloured .container input:checked ~ .checkmark {
+    background-color: #07dec5;
+  }
+  body.dark .checkmark {
+    background-color: #eee;
+  }
+  body.dark .container input:checked ~ .checkmark {
+    background-color: white;
+  }
+  body.dark .container input:checked ~ .checkmark {
+    background-color: rgb(28, 22, 22);
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+ 
+
+  .container .checkmark:after {
+    border: solid black;
+  }
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+
+#diff, #time, #theme{
+    border: 1px solid black;
+    margin: 5px;
+    border-radius: 5px;
+    
+    display: block;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+/* #hh3{
+    display: block;
+} */
+@media screen and (max-width: 900px) {
+  #board{
+    width: 250px;
+    height: 229px;
+  }
+  #number-container > p{
+    width: 25px;
+    height: 25px;
+    font-size: 17pt;
+  }
+  .tile{
+    width: 25px;
+    height: 25px;
+    font-size: 17pt;
+  }
+  .rightBorder {
+    border-right: 2px solid black;
+  }
+    
+  .bottomBorder {
+      border-bottom: 2px solid black;
+  }
+  #diff, #time, #theme{
+    margin: auto;
+    width: 50%;
+    margin-bottom: 20px;
+  }
+  
+}
+@media screen and (min-width: 900px) {
+  #setup-game{
+    display: flex;
+    
+  }
+}
